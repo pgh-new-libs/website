@@ -88,6 +88,7 @@ a:link, a:visited, a:active {
     padding: 5px;
     box-sizing: border-box;
     border-right: 3px solid white;
+    background: rgb(0, 25, 50);
 }
 
 #main-header-right {
@@ -135,7 +136,7 @@ a:link, a:visited, a:active {
     padding: 20px;
     box-sizing: border-box;
     border: 3px solid white;
-    background: var(--dark-shading-color);
+    background: rgba(15, 50, 100, 0.9);
 }
 
 .main-text {
