@@ -61,8 +61,8 @@ a:link, a:visited, a:active {
         45deg,
         var(--border-color-regular),
         var(--border-color-regular) 2px,
-        var(--background-color-primary) 2px,
-        var(--background-color-primary) 10px
+        var(--background-color-secondary) 2px,
+        var(--background-color-secondary) 10px
     );
     border-top: 2px solid var(--border-color-regular);
     border-bottom: 2px solid var(--border-color-regular);
@@ -100,7 +100,7 @@ a:link, a:visited, a:active {
     flex-direction: row;
     align-items: center;
     height: 125px;
-    width: 100%;
+    width: 90%;
     min-width: 700px;
     max-width: 900px;
     box-sizing: border-box;
@@ -154,7 +154,7 @@ a:link, a:visited, a:active {
 }
 
 #main-text-heading-wrapper {
-    width: 100%;
+    width: 90%;
     min-width: 700px;
     max-width: 900px;
     display: flex;
@@ -180,7 +180,7 @@ a:link, a:visited, a:active {
 }
 
 #main-text-wrapper {
-    width: 100%;
+    width: 90%;
     min-width: 700px;
     max-width: 900px;
     padding: 40px;
@@ -401,10 +401,105 @@ div.mce_inline_error {
 /* ---------------------------------------------------- */
 
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 800px) {
 
 
     /* ---  INTRO section  ---------------- */
+
+    #main-foreground {
+        margin-top: 5vh;
+    }
+
+    #main-header {
+        height: 100px;
+        width: 90%;
+        min-width: unset;
+        max-width: 500px;
+    }
+
+    #main-logo {
+        padding: 5px;
+    }
+
+    #main-header-right {
+        width: 100%;
+        cursor: unset;
+    }
+
+    #topic-intro {
+        height: 100%;
+        font-size: 1.7rem;
+        border-bottom: unset;
+    }
+
+    #main-header-topics {
+        display: none;
+    }
+
+    .topic-heading {
+        display: none;
+    }
+
+    #main-text-heading-wrapper {
+        width: 90%;
+        min-width: unset;
+        max-width:  500px;
+    }
+
+    #main-text-heading {
+        padding: 10px 30px;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .main-text-heading-em {
+
+    }
+
+    #main-text-wrapper {
+        width: 90%;
+        min-width: unset;
+        max-width:  500px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .main-text {
+
+    }
+
+    /* ---  EMAIL SIGNUP section  --------- */
+
+    #get-involved-text {
+        width: 80%;
+        min-width: unset;
+        max-width:  500px;
+        font-size: 1.2rem;
+        margin: 0 0 50px 0;
+    }
+
+    #mc-signup-form-wrapper {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .mc-field-group {
+        padding: 10px 0;
+    }
+
+    .mc-field-group label {
+        margin-right: 5px;
+    }
+
+    .mc-field-group label {
+        display: inline-block;
+        width: 50px;
+    }
+
+    .optionalParent {
+        margin-top: 10px;
+        margin-left: 60px;
+    }
 
     /* ---  FOOTER section  ---------------- */
 
@@ -423,6 +518,10 @@ div.mce_inline_error {
     .footer-vertical {
         align-items: center;
         padding: 50px 0 0 0;
+    }
+
+    #copyright-text-wrapper {
+        text-align: center;
     }
 
 }
