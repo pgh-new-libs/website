@@ -86,6 +86,9 @@
             </div>
 
             <!-- Text description for the current topic -->
+            <div id="main-text-heading-wrapper">
+                <h1 id="main-text-heading">About Us</h1>
+            </div>
             <div id="main-text-wrapper">
                 <p class="main-text"></p>
             </div>
@@ -96,8 +99,104 @@
 
 </div>
 
+
+<div id="mailchimp-form-container">
+
+    <h1 class="section-heading">Sign Up:</h1>
+
+    <form action="https://neoliberalproject.us10.list-manage.com/subscribe/post?u=4cdc21081a17386868bb80910&amp;id=6529ce23d5&amp;f_id=0047c9e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+        <!-- Div wrapper for form elements so we can format them nicely-->
+        <div id="mc-signup-form-wrapper">
+
+            <!-- First name entry box -->
+            <div class="mc-field-group">
+                <label for="mce-FNAME">First:</label>
+                <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                <span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>
+            </div>
+
+            <!-- Last name entry box -->
+            <div class="mc-field-group">
+                <label for="mce-LNAME">Last:</label>
+                <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                <span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>
+            </div>
+
+            <!-- Email entry box -->
+            <div class="mc-field-group">
+                <label for="mce-EMAIL">Email:*</label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+            </div>
+
+            <div id="mce-responses" class="clear foot">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4cdc21081a17386868bb80910_6529ce23d5" tabindex="-1" value=""></div>
+
+            <!-- 'Subscribe' button -->
+            <div class="optionalParent">
+                <div class="clear foot">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+<!-- Mailchimp form validation-->
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';
+    }(jQuery))
+
+    ;var $mcj = jQuery.noConflict(true);
+
+</script>
+
+
+<!-- Upcoming events section -->
+
+<div id="section-events">
+
+    <h1 class="section-heading">Upcoming Events:</h1>
+
+    <!-- Wrapper to hold info boxes for upcoming events -->
+    <!-- This is populated programmatically using JSON data from events.json -->
+    <div id="events-wrapper">
+
+        <div class="event-box" onclick="window.open('https://cnliberalism.org/events/pittsburgh-6he4hg')">
+
+            <div class="event-title">
+                February Meetup
+            </div>
+
+            <div class="event-details">
+                February 11, 2023 @ Yinz Coffee (on Baum)
+            </div>
+
+            <div class="event-description">
+                We're meeting at Yinz Coffee on Saturday February 11th. We'll talk 2023 local primaries, housing, immigration, and more! Coffee on us if it's your first time!
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
 <!-- Footer section, contains links, info, addresses, etc. -->
-<div id="section-footer" class="page-section">
+<div id="section-footer">
 
     <div id="footer-contents">
 

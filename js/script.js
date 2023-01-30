@@ -101,6 +101,34 @@ function populateFooter() {
 }
 
 
+function populateEvents() {
+
+    // Fetch footer headings and links from server
+    let prefix = window.location.hostname === "localhost" ? "" : window.location.href;
+    $.getJSON(prefix + "data/events.json", function(data) {
+
+        // Iterate over headings
+        for (const event in data) {
+
+            // Add a new vertical for each heading, create the heading inside it
+            let section = $("<div>").addClass("footer-vertical");
+            section.append($("<h2>").addClass("footer-vertical-heading").html(heading));
+
+            // Add the list of links under the heading
+            for (const link in data[heading]) {
+                let linkTag = $("<a>").attr("href", data[heading][link]).attr("target", "_blank").html(link);
+                section.append(linkTag)
+            }
+
+            // Add the heading and links to the page
+            $("#footer-contents").append(section);
+
+        }
+    });
+
+}
+
+
 function handleTopicClick() {
 
     if (!$(this).hasClass("selected")) {
@@ -109,8 +137,18 @@ function handleTopicClick() {
         $(this).addClass("selected");
 
         let topicName = $(this).attr("id").split('-')[1]
+
+        // Replace the text with the correct new text
+        $(".main-text-wrapper").html("<p class='main-text'></p>")
         $(".main-text").html(topicText[topicName]);
 
-    }
+        // Update the text heading
+        if (topicName === "intro") {
+            $("#main-text-heading").html("About Us");
+        } else {
+            let emphasized = "<span class='main-text-heading-em'>" + topicName + "</span>";
+            $("#main-text-heading").html("Our Philosophy: " + emphasized);
+        }
 
+    }
 }

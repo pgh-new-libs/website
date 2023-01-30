@@ -42,10 +42,14 @@ a:link, a:visited, a:active {
 /* -------------------------------------- */
 
 
+.section-heading {
+    font-size: 2.0rem;
+    margin: 0 0 75px 0;
+}
 
 
 /* ------------------------------------ */
-/* ---  MAIN section  ---------------- */
+/* ---  MAIN section  ----------------- */
 /* ------------------------------------ */
 
 
@@ -74,12 +78,12 @@ a:link, a:visited, a:active {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 80px;
-    width: 60%;
+    height: 100px;
+    width: 100%;
     min-width: 700px;
-    max-width: 1000px;
+    max-width: 900px;
     box-sizing: border-box;
-    border: 3px solid white;
+    border: 1px solid white;
     background: var(--dark-shading-color);
 }
 
@@ -87,7 +91,7 @@ a:link, a:visited, a:active {
     height: 100%;
     padding: 5px;
     box-sizing: border-box;
-    border-right: 3px solid white;
+    border-right: 1px solid white;
     background: rgb(0, 25, 50);
 }
 
@@ -105,7 +109,7 @@ a:link, a:visited, a:active {
     display: flex;
     align-items: center;
     padding-left: 12px;
-    border-bottom: 3px solid white;
+    border-bottom: 1px solid white;
 }
 
 #main-header-topics {
@@ -118,8 +122,8 @@ a:link, a:visited, a:active {
 .topic-heading {
     display: table-cell;
     height: 100%;
-    border-left: 3px solid white;
-    font-size: 0.8rem;
+    border-left: 1px solid white;
+    font-size: 1.0rem;
     vertical-align: middle;
     text-align: center;
 }
@@ -128,15 +132,40 @@ a:link, a:visited, a:active {
     border-left-style: unset;
 }
 
-#main-text-wrapper {
-    width: 60%;
+#main-text-heading-wrapper {
+    width: 100%;
     min-width: 700px;
-    max-width: 1000px;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+
+#main-text-heading {
+    padding: 10px 20px;
     margin-top: 50px;
-    padding: 20px;
+    margin-bottom: 0;
+    border: 1px solid white;
+    border-bottom-style: hidden;
+    background: rgb(0, 25, 50);
     box-sizing: border-box;
-    border: 3px solid white;
-    background: rgba(15, 50, 100, 0.9);
+    font-size: 1.5rem;
+}
+
+.main-text-heading-em {
+    color: rgb(225, 255, 0);
+    text-transform: capitalize;
+}
+
+#main-text-wrapper {
+    width: 100%;
+    min-width: 700px;
+    max-width: 900px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background: rgb(0, 25, 50);
 }
 
 .main-text {
@@ -144,6 +173,7 @@ a:link, a:visited, a:active {
     font-weight: 100;
     text-align: left;
     line-height: 22px;
+    margin: 0 0 20px 0;
 }
 
 .clickable.selected {
@@ -153,6 +183,131 @@ a:link, a:visited, a:active {
 
 .clickable:not(.selected):hover {
     background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ------------------------------------------- */
+/* ----- Mailchimp signup form --------------- */
+/* ------------------------------------------- */
+
+
+#mailchimp-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 80px 0 100px 0;
+    background: rgb(0, 4, 26);;
+}
+
+#mc-signup-form-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.mc-field-group {
+    padding: 0 15px;
+}
+
+.mc-field-group label {
+    margin-right: 5px;
+}
+
+.mc-field-group input {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid white;
+    height: 25px;
+    font-family: monospace;
+}
+
+div.mce_inline_error {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    color: palevioletred;
+}
+
+#mce-FNAME {
+    width: 100px;
+}
+
+#mce-LNAME {
+    width: 100px;
+}
+
+#mce-EMAIL {
+    width: 200px;
+}
+
+#mc-embedded-subscribe {
+    background-color: white;
+    height: 31px;
+    color: black;
+    border: 1px solid white;
+    font-family: monospace;
+}
+
+
+/* ------------------------------------ */
+/* ---  EVENTS section  --------------- */
+/* ------------------------------------ */
+
+
+#section-events {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(25 40 50);
+    padding: 80px 0 100px 0;
+}
+
+#events-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.event-box {
+    height: 200px;
+    width: 300px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.event-box:hover {
+    border-color: yellow;
+    background: rgb(35 55 70);
+}
+
+.event-title {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.event-details {
+    width: 100%;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+    line-height: 17px;
+}
+
+.event-description {
+    width: 100%;
+    font-size: 1.0rem;
 }
 
 
@@ -191,7 +346,7 @@ a:link, a:visited, a:active {
     text-transform: uppercase;
     font-size: 0.9rem;
     margin-top: 0;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
 }
 
 .footer-vertical a {
@@ -229,8 +384,6 @@ a:link, a:visited, a:active {
 
 
     /* ---  INTRO section  ---------------- */
-
-
 
     /* ---  FOOTER section  ---------------- */
 
