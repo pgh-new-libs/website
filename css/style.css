@@ -347,6 +347,7 @@ div.mce_inline_error {
     flex-direction: row;
     align-items: start;
     justify-content: center;
+    padding: 40px 0 20px 0;
 }
 
 #logo-footer {
