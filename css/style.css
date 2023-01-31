@@ -458,6 +458,11 @@ div.mce_inline_error {
         display: none;
     }
 
+    #topic-intro {
+        background: var(--background-color-secondary-hover);
+        color: var(--text-color-selected);
+    }
+
     .topic-heading {
         display: none;
     }
