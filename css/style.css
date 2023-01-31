@@ -11,7 +11,7 @@
     --text-color-selected: rgb(225, 255, 0);
     --border-color-regular: white;
     --standard-border-style: 1px solid var(--border-color-regular);
-    --footer-border-style: 1px solid rgb(150, 150, 150);
+    --footer-border-style: 1px solid rgb(200, 200, 200);
 }
 
 
@@ -236,16 +236,18 @@ a:link, a:visited, a:active {
     padding: 0 15px;
 }
 
-.mc-field-group label {
-    margin-right: 5px;
-}
-
 .mc-field-group input {
     background-color: rgba(0, 0, 0, 0);
     color: var(--text-color-regular);
     border: var(--standard-border-style);
     height: 25px;
     font-family: monospace;
+    text-align: center;
+}
+
+.mc-field-group input::placeholder {
+    font-style: italic;
+    color: rgb(170, 170, 170);
 }
 
 div.mce_inline_error {
@@ -267,11 +269,15 @@ div.mce_inline_error {
     width: 200px;
 }
 
+.optionalParent {
+    padding: 0 15px;
+}
+
 #mc-embedded-subscribe {
     background-color: white;
-    height: 31px;
+    height: 29px;
     color: black;
-    border: var(--standard-border-style);
+    border: none;
     font-family: monospace;
 }
 
@@ -501,7 +507,7 @@ div.mce_inline_error {
 
     #mc-signup-form-wrapper {
         flex-direction: column;
-        align-items: unset;
+        align-items: center;
     }
 
     .mc-field-group {
@@ -519,7 +525,7 @@ div.mce_inline_error {
 
     .optionalParent {
         margin-top: 10px;
-        margin-left: 60px;
+        margin-left: unset;
     }
 
     /* ---  FOOTER section  ---------------- */
@@ -533,7 +539,7 @@ div.mce_inline_error {
         padding-right: 0;
         padding-bottom: 50px;
         border-right: none;
-        border-bottom: var(--standard-border-style);
+        border-bottom: var(--footer-border-style);
     }
 
     .footer-vertical {
