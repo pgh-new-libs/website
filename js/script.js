@@ -29,8 +29,9 @@ $(document).ready(function() {
     // Attach click handlers to the topic selector buttons
     $(".clickable").click(handleTopicClick);
 
-    // Attach click handlers to the navigation arrows
+    // Attach click and hover handlers to the navigation arrows
     $(".arrow-icon").click(handleArrowClick);
+    $(".arrow-icon").hover(handleArrowHoverOn, handleArrowHoverOff);
 
 });
 
@@ -169,5 +170,35 @@ function handleArrowClick() {
 
     // Simulate a click of the (now hidden) topic selector button
     $("#topic-" + topicList[newIndex]).trigger("click");
+
+}
+
+
+/**
+ * Function to switch the arrow icon to the light version when
+ * the mouse hovers over the button
+ */
+function handleArrowHoverOn() {
+
+    if ($(this).attr("id") === "arrow-fwd") {
+        $(this).attr("src", "/img/arrow_fwd_light.png");
+    } else {
+        $(this).attr("src", "/img/arrow_back_light.png");
+    }
+
+}
+
+
+/**
+ * Function to switch the arrow icon back to the regular version when
+ * the mouse hovers off the button
+ */
+function handleArrowHoverOff() {
+
+    if ($(this).attr("id") === "arrow-fwd") {
+        $(this).attr("src", "/img/arrow_fwd.png");
+    } else {
+        $(this).attr("src", "/img/arrow_back.png");
+    }
 
 }
