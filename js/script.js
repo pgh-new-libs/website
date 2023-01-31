@@ -30,7 +30,7 @@ $(document).ready(function() {
     $(".clickable").click(handleTopicClick);
 
     // Attach click and hover handlers to the navigation arrows
-    $(".arrow-icon").click(handleArrowClick);
+    $(".arrow-icon").on('touchend click', handleArrowClick);
     $(".arrow-icon").hover(handleArrowHoverOn, handleArrowHoverOff);
 
 });
@@ -159,7 +159,7 @@ function handleTopicClick() {
  * the topics, instead of the topic selectors that are visible on wider screens. It works
  * by simulating a press of the topic selector button for the next topic in order
  */
-function handleArrowClick() {
+function handleArrowClick(event) {
 
     // Determine which direction to move in
     let move = $(this).attr("id") === "arrow-fwd" ? 1 : -1;
@@ -170,5 +170,40 @@ function handleArrowClick() {
 
     // Simulate a click of the (now hidden) topic selector button
     $("#topic-" + topicList[newIndex]).trigger("click");
+
+    // Trigger mouseleave after clicking if this is a mobile device
+    if (event.type !== 'click') {
+        setTimeout(function() { $(".arrow-icon").trigger('mouseleave'); }, 150);
+    }
+
+}
+
+
+/**
+ * Function to switch the arrow icon to the light version when
+ * the mouse hovers over the button
+ */
+function handleArrowHoverOn() {
+
+    if ($(this).attr("id") === "arrow-fwd") {
+        $(this).attr("src", "/img/arrow_fwd_light.png");
+    } else {
+        $(this).attr("src", "/img/arrow_back_light.png");
+    }
+
+}
+
+
+/**
+ * Function to switch the arrow icon back to the regular version when
+ * the mouse hovers off the button
+ */
+function handleArrowHoverOff() {
+
+    if ($(this).attr("id") === "arrow-fwd") {
+        $(this).attr("src", "/img/arrow_fwd.png");
+    } else {
+        $(this).attr("src", "/img/arrow_back.png");
+    }
 
 }
