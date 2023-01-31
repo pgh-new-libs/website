@@ -3,6 +3,7 @@
 /* ---  VARIABLES  -------------- */
 /* ------------------------------ */
 
+
 :root {
     --background-color-primary: rgb(0, 5, 25);
     --background-color-secondary: rgb(25 40 50);
@@ -30,7 +31,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none;
 }
 
 a {
@@ -153,7 +154,7 @@ a:link, a:visited, a:active {
     border-left-style: unset;
 }
 
-#main-text-heading-wrapper {
+#main-text-title-wrapper {
     width: 90%;
     min-width: 700px;
     max-width: 900px;
@@ -163,7 +164,7 @@ a:link, a:visited, a:active {
     margin-top: 75px;
 }
 
-#main-text-heading {
+#main-text-title {
     padding: 10px 20px;
     margin: 0;
     border: var(--standard-border-style);
@@ -173,7 +174,7 @@ a:link, a:visited, a:active {
     font-size: 1.5rem;
 }
 
-.main-text-heading-em {
+.main-text-title-em {
     color: var(--text-color-selected);
     text-transform: capitalize;
 }
@@ -301,12 +302,13 @@ div.mce_inline_error {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
-
 .event-box {
-    height: 200px;
-    width: 300px;
+    min-height: 175px;
+    width: 280px;
+    max-width: 70%;
     border: var(--standard-border-style);
     display: flex;
     flex-direction: column;
@@ -359,7 +361,7 @@ div.mce_inline_error {
     padding: 40px 0 20px 0;
 }
 
-#logo-footer {
+#footer-logo {
     height: 75px;
     padding-right: 50px;
     border-right: var(--footer-border-style);
@@ -413,6 +415,13 @@ div.mce_inline_error {
 @media only screen and (max-width: 800px) {
 
 
+    /* ---  GENERAL ----------------------- */
+
+    .section-heading {
+        margin: 0 0 40px 0;
+    }
+
+
     /* ---  INTRO section  ---------------- */
 
     #main-background-img {
@@ -453,7 +462,7 @@ div.mce_inline_error {
         display: none;
     }
 
-    #main-text-heading-wrapper {
+    #main-text-title-wrapper {
         width: 90%;
         min-width: unset;
         max-width:  500px;
@@ -461,13 +470,9 @@ div.mce_inline_error {
         justify-content: space-between;
     }
 
-    #main-text-heading {
+    #main-text-title {
         padding: 10px 15px;
         font-size: 1.0rem;
-    }
-
-    .main-text-heading-em {
-
     }
 
     #main-text-wrapper {
@@ -511,7 +516,7 @@ div.mce_inline_error {
     }
 
     .mc-field-group {
-        padding: 10px 0;
+        padding: 12px 0;
     }
 
     .mc-field-group label {
@@ -524,7 +529,7 @@ div.mce_inline_error {
     }
 
     .optionalParent {
-        margin-top: 10px;
+        margin-top: 12px;
         margin-left: unset;
     }
 
@@ -535,7 +540,7 @@ div.mce_inline_error {
         align-items: center;
     }
 
-    #logo-footer {
+    #footer-logo {
         padding-right: 0;
         padding-bottom: 50px;
         border-right: none;
