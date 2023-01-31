@@ -30,7 +30,7 @@ $(document).ready(function() {
     $(".clickable").click(handleTopicClick);
 
     // Attach click and hover handlers to the navigation arrows
-    $(".arrow-icon").on('touchend click', handleArrowClick);
+    $(".arrow-icon").click(handleArrowClick);
     $(".arrow-icon").hover(handleArrowHoverOn, handleArrowHoverOff);
 
 });
@@ -170,11 +170,6 @@ function handleArrowClick(event) {
 
     // Simulate a click of the (now hidden) topic selector button
     $("#topic-" + topicList[newIndex]).trigger("click");
-
-    // Trigger mouseleave after clicking if this is a mobile device
-    if (event.type !== 'click') {
-        setTimeout(function() { $(".arrow-icon").trigger('mouseleave'); }, 150);
-    }
 
 }
 
