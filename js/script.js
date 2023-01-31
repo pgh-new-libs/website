@@ -30,7 +30,7 @@ $(document).ready(function() {
     $(".clickable").click(handleTopicClick);
 
     // Attach click and hover handlers to the navigation arrows
-    $(".arrow-icon").click(handleArrowClick);
+    $(".arrow-icon").on('touchend click', handleArrowClick);
     $(".arrow-icon").hover(handleArrowHoverOn, handleArrowHoverOff);
 
 });
@@ -161,15 +161,22 @@ function handleTopicClick() {
  */
 function handleArrowClick(event) {
 
-    // Determine which direction to move in
-    let move = $(this).attr("id") === "arrow-fwd" ? 1 : -1;
+    if (event.type === "click") {
 
-    // Get the next topic in that direction
-    let currentIndex = topicList.indexOf(currentTopic);
-    let newIndex = (currentIndex + move + topicList.length) % topicList.length;
+        // Determine which direction to move in
+        let move = $(this).attr("id") === "arrow-fwd" ? 1 : -1;
 
-    // Simulate a click of the (now hidden) topic selector button
-    $("#topic-" + topicList[newIndex]).trigger("click");
+        // Get the next topic in that direction
+        let currentIndex = topicList.indexOf(currentTopic);
+        let newIndex = (currentIndex + move + topicList.length) % topicList.length;
+
+        // Simulate a click of the (now hidden) topic selector button
+        $("#topic-" + topicList[newIndex]).trigger("click");
+
+    } else {
+        // Trigger mouseleave after clicking if this is a mobile device
+        setTimeout(function() { $(".arrow-icon").trigger('mouseleave'); }, 150);
+    }
 
 }
 
