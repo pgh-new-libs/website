@@ -409,8 +409,12 @@ div.mce_inline_error {
 
     /* ---  INTRO section  ---------------- */
 
+    #main-background-img {
+        height: 110vh;
+    }
+
     #main-foreground {
-        margin-top: 5vh;
+        margin-top: 3vh;
     }
 
     #main-header {
@@ -447,7 +451,7 @@ div.mce_inline_error {
         width: 90%;
         min-width: unset;
         max-width:  500px;
-        margin-top: 40px;
+        margin-top: 20px;
         justify-content: space-between;
     }
 
@@ -464,12 +468,12 @@ div.mce_inline_error {
         width: 90%;
         min-width: unset;
         max-width:  500px;
-        padding: 30px;
+        padding: 20px 20px 10px 20px;
         box-sizing: border-box;
     }
 
     .main-text {
-
+        font-size: 1.1rem;
     }
 
     .arrow-wrapper {

@@ -9,7 +9,7 @@ let topicList = [
     "immigration",
     "environment",
     "pragmatism",
-    "openness"
+    "tolerance"
 ]
 
 let currentTopic = "intro";
@@ -179,7 +179,7 @@ function handleArrowClick() {
 
     // Get the next topic in that direction
     let currentIndex = topicList.indexOf(currentTopic);
-    let newIndex = (currentIndex + move + 8) % topicList.length;
+    let newIndex = (currentIndex + move + topicList.length) % topicList.length;
 
     // Simulate a click of the (now hidden) topic selector button
     $("#topic-" + topicList[newIndex]).trigger("click");
