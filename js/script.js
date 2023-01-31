@@ -1,6 +1,19 @@
 
 let topicText = {};
 
+let topicList = [
+    "intro",
+    "liberalism",
+    "economy",
+    "housing",
+    "immigration",
+    "environment",
+    "pragmatism",
+    "openness"
+]
+
+let currentTopic = "intro";
+
 /**
  * This function is called when the page finishes loading
  */
@@ -12,7 +25,11 @@ $(document).ready(function() {
     // Fetch footer links from server and assemble footer
     populateFooter();
 
+    // Attach click handlers to the topic selector buttons
     $(".clickable").click(handleTopicClick);
+
+    // Attach click handlers to the navigation arrows
+    $(".arrow-icon").click(handleArrowClick);
 
 });
 
@@ -137,6 +154,7 @@ function handleTopicClick() {
         $(this).addClass("selected");
 
         let topicName = $(this).attr("id").split('-')[1]
+        currentTopic = topicName
 
         // Replace the text with the correct new text
         $(".main-text-wrapper").html("<p class='main-text'></p>")
@@ -151,4 +169,19 @@ function handleTopicClick() {
         }
 
     }
+}
+
+
+function handleArrowClick() {
+
+    // Determine which direction to move in
+    let move = $(this).attr("id") === "arrow-fwd" ? 1 : -1;
+
+    // Get the next topic in that direction
+    let currentIndex = topicList.indexOf(currentTopic);
+    let newIndex = (currentIndex + move + 8) % topicList.length;
+
+    // Simulate a click of the (now hidden) topic selector button
+    $("#topic-" + topicList[newIndex]).trigger("click");
+
 }

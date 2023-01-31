@@ -160,13 +160,12 @@ a:link, a:visited, a:active {
     display: flex;
     align-items: center;
     justify-content: start;
-
+    margin-top: 75px;
 }
 
 #main-text-heading {
     padding: 10px 20px;
-    margin-top: 75px;
-    margin-bottom: 0;
+    margin: 0;
     border: var(--standard-border-style);
     border-bottom-style: hidden;
     background: var(--background-color-primary);
@@ -204,6 +203,10 @@ a:link, a:visited, a:active {
 
 .clickable:not(.selected):hover {
     background: rgba(255, 255, 255, 0.5);
+}
+
+.arrow-wrapper {
+    display: none;
 }
 
 
@@ -444,12 +447,13 @@ div.mce_inline_error {
         width: 90%;
         min-width: unset;
         max-width:  500px;
+        margin-top: 40px;
+        justify-content: space-between;
     }
 
     #main-text-heading {
-        padding: 10px 30px;
-        margin-top: 40px;
-        margin-bottom: 0;
+        padding: 10px 15px;
+        font-size: 1.0rem;
     }
 
     .main-text-heading-em {
@@ -466,6 +470,19 @@ div.mce_inline_error {
 
     .main-text {
 
+    }
+
+    .arrow-wrapper {
+        display: flex;
+        margin-right: 5px;
+    }
+
+    .arrow-icon {
+        height: 30px;
+    }
+
+    #arrow-fwd {
+        margin-left: 13px;
     }
 
     /* ---  EMAIL SIGNUP section  --------- */
