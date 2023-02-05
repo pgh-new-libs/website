@@ -43,64 +43,57 @@
 <body>
 
     <!-- Main contents of page, with image, logo, and text descriptions -->
-    <div id="section-main" >
+    <!-- background image is set here in the section wrapper -->
+    <div id="section-main" aria-label="Artistic depiction of downtown Pittsburgh, the incline, and the river confluence">
 
-        <!-- Extra layer of div so we can overlay things on image properly -->
-        <div id="main-wrapper">
+        <!-- Everything on top of image: logo, title, topic selectors, and description box -->
+        <div id="main-wrapper" >
 
-            <!-- Main background image -->
-            <img id="main-background-img" src="img/background_incline.png" alt="Artistic depiction of downtown Pittsburgh, the incline, and the river confluence">
+            <!-- Logo, name, and topic selectors -->
+            <div id="main-header">
 
-            <!-- Everything appearing over the image - logo, title, topic selectors, and description box -->
-            <div id="main-foreground">
+                <!-- Logo -->
+                <img id="main-logo" src="img/logo_color.png" alt="Pittsburgh New Liberals logo, white with transparent background">
 
-                <!-- Logo, name, and topic selectors -->
-                <div id="main-header">
+                <!-- Title text and topic selectors -->
+                <div id="main-header-right">
 
-                    <!-- Logo -->
-                    <img id="main-logo" src="img/logo_color.png" alt="Pittsburgh New Liberals logo, white with transparent background">
+                    <!-- Row containing the text "Pittsburgh New Liberals -->
+                    <div id="topic-intro" class="clickable selected">Pittsburgh New Liberals</div>
 
-                    <!-- Title text and topic selectors -->
-                    <div id="main-header-right">
-
-                        <!-- Row containing the text "Pittsburgh New Liberals -->
-                        <div id="topic-intro" class="clickable selected">Pittsburgh New Liberals</div>
-
-                        <!-- Row containing buttons to switch between topics -->
-                        <div id="main-header-topics">
-                            <h1 id="topic-liberalism" class="topic-heading clickable topic-heading-first">Liberalism</h1>
-                            <h1 id="topic-economy" class="topic-heading clickable">Economy</h1>
-                            <h1 id="topic-housing" class="topic-heading clickable">Housing</h1>
-                            <h1 id="topic-immigration" class="topic-heading clickable">Immigration</h1>
-                            <h1 id="topic-environment" class="topic-heading clickable">Environment</h1>
-                            <h1 id="topic-pragmatism" class="topic-heading clickable">Pragmatism</h1>
-                            <h1 id="topic-tolerance" class="topic-heading clickable">Tolerance</h1>
-                        </div>
-
+                    <!-- Row containing buttons to switch between topics -->
+                    <div id="main-header-topics">
+                        <h1 id="topic-liberalism" class="topic-heading clickable topic-heading-first">Liberalism</h1>
+                        <h1 id="topic-economy" class="topic-heading clickable">Economy</h1>
+                        <h1 id="topic-housing" class="topic-heading clickable">Housing</h1>
+                        <h1 id="topic-immigration" class="topic-heading clickable">Immigration</h1>
+                        <h1 id="topic-environment" class="topic-heading clickable">Environment</h1>
+                        <h1 id="topic-pragmatism" class="topic-heading clickable">Pragmatism</h1>
+                        <h1 id="topic-tolerance" class="topic-heading clickable">Tolerance</h1>
                     </div>
 
                 </div>
 
-                <!-- Title for the current topic -->
-                <div id="main-text-title-wrapper">
+            </div>
 
-                    <!-- Topic title that appears above the text body -->
-                    <h1 id="main-text-title">About Us</h1>
+            <!-- Title for the current topic -->
+            <div id="main-text-title-wrapper">
 
-                    <!-- Forward / Back arrows that appear on narrow screens in place of topic selectors -->
-                    <div class="arrow-wrapper">
-                        <img id="arrow-back" class="arrow-icon" src="img/arrow_back.png" alt="backwards arrow icon">
-                        <img id="arrow-fwd" class="arrow-icon" src="img/arrow_fwd.png" alt="forwards arrow icon">
-                    </div>
+                <!-- Topic title that appears above the text body -->
+                <h1 id="main-text-title">About Us</h1>
 
+                <!-- Forward / Back arrows that appear on narrow screens in place of topic selectors -->
+                <div class="arrow-wrapper">
+                    <img id="arrow-back" class="arrow-icon" src="img/arrow_back.png" alt="backwards arrow icon">
+                    <img id="arrow-fwd" class="arrow-icon" src="img/arrow_fwd.png" alt="forwards arrow icon">
                 </div>
 
-                <!-- Text description for the current topic -->
-                <!-- Data fetched from a JSON file and updated by JavaScript -->
-                <div id="main-text-wrapper">
-                    <p class="main-text"></p>
-                </div>
+            </div>
 
+            <!-- Text description for the current topic -->
+            <!-- Data fetched from a JSON file and updated by JavaScript -->
+            <div id="main-text-wrapper">
+                <p class="main-text"></p>
             </div>
 
         </div>

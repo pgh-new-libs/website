@@ -75,20 +75,18 @@ a:link, a:visited, a:active {
 /* ------------------------------------ */
 
 
-#main-wrapper {
+#section-main {
+    background-image: url(../img/background_incline.png);
+    background-size: cover;
     display: flex;
-    position: relative;
-}
-
-#main-background-img {
-    display: block;
+    justify-content: center;
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
-#main-foreground {
-    position: absolute;
+#main-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -421,14 +419,9 @@ div.mce_inline_error {
         margin: 0 0 40px 0;
     }
 
-
     /* ---  INTRO section  ---------------- */
 
-    #main-background-img {
-        height: 103vh;
-    }
-
-    #main-foreground {
+    #main-wrapper {
         margin-top: 3vh;
     }
 

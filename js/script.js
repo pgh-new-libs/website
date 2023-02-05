@@ -33,6 +33,7 @@ $(document).ready(function() {
     $(".arrow-icon").on('touchend click', handleArrowClick);
     $(".arrow-icon").hover(handleArrowHoverOn, handleArrowHoverOff);
 
+
 });
 
 
